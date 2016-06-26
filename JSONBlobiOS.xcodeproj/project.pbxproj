@@ -23,7 +23,6 @@
 		A0FA0A5C1D1D2051005D7236 /* AlamofireUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA0A5B1D1D2051005D7236 /* AlamofireUtils.swift */; };
 		A0FA0A5E1D1D2082005D7236 /* URIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA0A5D1D1D2082005D7236 /* URIConstants.swift */; };
 		A0FA0A601D1D27E2005D7236 /* ExpenseListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA0A5F1D1D27E2005D7236 /* ExpenseListResponse.swift */; };
-		A0FA0A631D1D3E80005D7236 /* GetExpenseListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA0A621D1D3E80005D7236 /* GetExpenseListDelegate.swift */; };
 		A0FA0A671D1D431C005D7236 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA0A661D1D431C005D7236 /* ExpenseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		A0FA0A5B1D1D2051005D7236 /* AlamofireUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireUtils.swift; sourceTree = "<group>"; };
 		A0FA0A5D1D1D2082005D7236 /* URIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URIConstants.swift; sourceTree = "<group>"; };
 		A0FA0A5F1D1D27E2005D7236 /* ExpenseListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseListResponse.swift; sourceTree = "<group>"; };
-		A0FA0A621D1D3E80005D7236 /* GetExpenseListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetExpenseListDelegate.swift; sourceTree = "<group>"; };
 		A0FA0A661D1D431C005D7236 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		D9AAAE754C3714FC9C22EA6A /* Pods_JSONBlobiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONBlobiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,7 +155,6 @@
 		A0FA0A611D1D3E57005D7236 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A0FA0A621D1D3E80005D7236 /* GetExpenseListDelegate.swift */,
 				A0DBDE601D1F27A2009998F6 /* NoInternetDelegate.swift */,
 			);
 			name = protocols;
@@ -313,7 +310,6 @@
 				A0DBDE591D1EF6E0009998F6 /* StateType.swift in Sources */,
 				A0FA0A671D1D431C005D7236 /* ExpenseTableViewCell.swift in Sources */,
 				A0FA0A5E1D1D2082005D7236 /* URIConstants.swift in Sources */,
-				A0FA0A631D1D3E80005D7236 /* GetExpenseListDelegate.swift in Sources */,
 				A0FA0A5C1D1D2051005D7236 /* AlamofireUtils.swift in Sources */,
 				A0DBDE5B1D1F219A009998F6 /* Utils.swift in Sources */,
 				A0DBDE5F1D1F277A009998F6 /* NoInternetViewController.swift in Sources */,

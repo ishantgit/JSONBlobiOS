@@ -53,14 +53,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     private func startActivityIndicator() {
         self.activityIndicator.startAnimating()
         self.activityIndicator.hidden = false
+        self.tableView.hidden = true
     }
     
     private func stopActivityIndicator() {
         self.activityIndicator.stopAnimating()
         self.activityIndicator.hidden = true
-        if self.refreshControl.refreshing {
-            self.refreshControl.endRefreshing()
-        }
+        self.tableView.hidden = false
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -137,10 +136,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }else if !isInternetConnected{
                 if self.expenseList.count == 0{
                     self.presentNoInternetConnection()
-                }else{
-                    if let errorString = error{
-                        self.showToast(errorString)
-                    }
+                }
+            }else{
+                if let errorString = error{
+                    self.showToast(errorString)
                 }
             }
         }
@@ -168,10 +167,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }else if !isInternetConnected{
                 if self.expenseList.count == 0{
                     self.presentNoInternetConnection()
-                }else{
-                    if let errorString = error{
-                        self.showToast(errorString)
-                    }
+                }
+            }else{
+                if let errorString = error{
+                    self.showToast(errorString)
                 }
             }
         }
@@ -192,8 +191,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         self.view.makeToast(toastMessage, position: CGPoint(x: screenSize.width/2, y: (screenSize.height - 50.0)))
     }
-    
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
