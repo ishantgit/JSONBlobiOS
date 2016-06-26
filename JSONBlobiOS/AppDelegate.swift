@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    //Scheduling Timer for every 30 Seconds
     var timer: NSTimer?
     static let getExpenseListNotifier = "expenseListNotifier"
 

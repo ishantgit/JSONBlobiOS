@@ -21,7 +21,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     static let getExpenseListNotifier = "expenseListNotifier"
     let rupee = "\u{20B9}"
 
-    
+    //Pull to refresh for tableView
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(ViewController.refreshExpenseList(_:)), forControlEvents: UIControlEvents.ValueChanged)
@@ -48,7 +48,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewWillAppear(animated: Bool) {
         self.getExpenseList()
     }
-    
     
     private func startActivityIndicator() {
         self.activityIndicator.startAnimating()
@@ -107,13 +106,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-    // for dynamic height
+    // for dynamic(Wrap content) height of tableView cell
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         self.tableView.estimatedRowHeight = 164.0
         return UITableViewAutomaticDimension
     }
 
 
+    //GET Expense
     func getExpenseList(){
         if expenseList.count == 0 {
             self.startActivityIndicator()
@@ -145,6 +145,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
+    //Post state
     func postExpenseState(position: Int,state: String,expense: Expense){
         let indicator = ActivityViewController(message: state)
         self.presentViewController(indicator, animated: false, completion: nil)
@@ -176,6 +177,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
+    //Present No Connection ViewController
     func presentNoInternetConnection(){
         if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("NoInternetViewController") as? NoInternetViewController{
             vc.noInternetDelegate = self
@@ -183,6 +185,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
+    //Delegate method NoInternetDelegate
     func connectedToInternet() {
         self.getExpenseList()
     }

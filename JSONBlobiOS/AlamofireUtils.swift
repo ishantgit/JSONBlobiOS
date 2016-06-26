@@ -53,19 +53,5 @@ class AlamofireUtils {
             completionHandler(nil, errorModel,true)
         }
     }
-    
-//    private class func getGenericError() -> ErrorModel {
-//        let error = ErrorModel()
-//        error.code = 500
-//        error.message = "Something went wrong. Try Again"
-//        return error
-//    }
-//    
-//    private class func getNetworkFailureError() -> ErrorModel {
-//        let error = ErrorModel()
-//        error.code = 511
-//        error.message = "Network Failure"
-//        return error
-//    }
 
 }

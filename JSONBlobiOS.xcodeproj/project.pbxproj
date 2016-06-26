@@ -220,6 +220,7 @@
 				TargetAttributes = {
 					A0FA0A3C1D1D1D1C005D7236 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VU4942AREY;
 					};
 				};
 			};
